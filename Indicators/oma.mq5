@@ -105,13 +105,7 @@ int OnCalculate(const int rates_total,
          period=((signal/noise)*(MaxPeriod-MinPeriod))+MinPeriod;
         }
       //--- 
-      double e1=E1[i-1];
-      double e2=E2[i-1];
-      double e3=E3[i-1];
-      double e4=E4[i-1];
-      double e5=E5[i-1];
-      double e6=E6[i-1];
-
+      
       double alpha=(20+InpSpeed)/(1.0+InpSpeed+period);
       //--- v1 
       E1[i] = E1[i-1] + alpha*(close[i]- E1[i-1]);
